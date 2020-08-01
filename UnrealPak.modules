@@ -1,0 +1,15 @@
+{
+	"BuildId": "f3861adf-ae1a-40fe-ada3-cda3ebe330c2",
+	"Modules": 
+	{
+		"BuildSettings": "UnrealPak-BuildSettings.dll",
+		"Core": "UnrealPak-Core.dll",
+		"DerivedDataCache": "UnrealPak-DerivedDataCache.dll",
+		"Json": "UnrealPak-Json.dll",
+		"PakFile": "UnrealPak-PakFile.dll",
+		"PakFileUtilities": "UnrealPak-PakFileUtilities.dll",
+		"Projects": "UnrealPak-Projects.dll",
+		"RSA": "UnrealPak-RSA.dll",
+		"TraceLog": "UnrealPak-TraceLog.dll"
+	}
+}

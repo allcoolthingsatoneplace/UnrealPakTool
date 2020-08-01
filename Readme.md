@@ -15,9 +15,9 @@
 - UnrealPak <PakFolder> -GeneratePIXMappingFile -OutputPath=<Path>
 
 > Options:
-- -cryptokeys=<Crypto.json>
-- -blocksize=<BlockSize>
-- -bitwindow=<BitWindow>
+- -cryptokeys=< encryption keys Crypto.json>
+- -blocksize=< BlockSize >
+- -bitwindow=< BitWindow >
 - -compress
 - -encrypt
 - -order=<OrderingFile>
@@ -34,14 +34,15 @@
 
 > Decryption:
 - Open/Edit Crypto.json
-
-- "EncryptionKey":
--  {
--      "$type":"2",
--      "Name":"null",
--      "Guid":"null",
--      "Key":"Your Base64 key here"
--  },
+```json
+"EncryptionKey":
+  {
+      "$type":"2",
+      "Name":"null",
+      "Guid":"null",
+      "Key":"Your Base64 key here"
+  },
+```
 
 - Crypto.json default location within your project
 - X:\Users\USER_NAME\Documents\Unreal Projects\YOUR_PROJECT_NAME\Saved\Cooked\WindowsNoEditor\YOUR_PROJECT_NAME\Metadata

@@ -31,6 +31,17 @@
 - -sign (generate a signature (.sig) file alongside the pak)
 - -fallbackOrderForNonUassetFiles (if order is not specified for ubulk/uexp files, figure out implicit order based on the uasset order. Generally applies only to the cooker order)
 
+> Decryption:
+- Open/Edit Crypto.json
+-"EncryptionKey":{
+-      "$type":"2",
+-      "Name":"null",
+-      "Guid":"null",
+-      "Key":"Your Base64 key here"
+-  },
+- Crypto.json default location within your project
+- X:\Users\USER_NAME\Documents\Unreal Projects\YOUR_PROJECT_NAME\Saved\Cooked\WindowsNoEditor\YOUR_PROJECT_NAME\Metadata
+
 > Licensing and Contributions
 > ---------------------------
 

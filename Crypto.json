@@ -1,0 +1,27 @@
+{
+   "$types":{
+      "UnrealBuildTool.EncryptionAndSigning+CryptoSettings, UnrealBuildTool, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null":"1",
+      "UnrealBuildTool.EncryptionAndSigning+EncryptionKey, UnrealBuildTool, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null":"2",
+      "UnrealBuildTool.EncryptionAndSigning+SigningKeyPair, UnrealBuildTool, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null":"3",
+      "UnrealBuildTool.EncryptionAndSigning+SigningKey, UnrealBuildTool, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null":"4"
+   },
+   "$type":"1",
+   "EncryptionKey":{
+      "$type":"2",
+      "Name":"null",
+      "Guid":"null",
+      "Key":"Your Base64 key here"
+   },
+   "SigningKey": null,
+   "bEnablePakSigning":true,
+   "bEnablePakIndexEncryption":true,
+   "bEnablePakIniEncryption":true,
+   "bEnablePakUAssetEncryption":true,
+   "bEnablePakFullAssetEncryption":false,
+   "bDataCryptoRequired":true,
+   "PakEncryptionRequired":true,
+   "PakSigningRequired":true,
+   "SecondaryEncryptionKeys":[
+
+   ]
+}

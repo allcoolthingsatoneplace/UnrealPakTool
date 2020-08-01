@@ -34,7 +34,7 @@
 > Decryption:
 - Open/Edit Crypto.json
 -
--"EncryptionKey":{
+- "EncryptionKey":{
 -      "$type":"2",
 -      "Name":"null",
 -      "Guid":"null",

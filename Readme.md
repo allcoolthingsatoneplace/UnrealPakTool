@@ -106,6 +106,7 @@ then in cmd run:
 UnrealPak.exe name_of_your_game-WindowsNoEditor.pak -cryptokeys=Crypto.json
 ```
 **[ i ]** Crypto.json default location within your project:
+
 **[ i ]** X:\Users\USER_NAME\Documents\Unreal Projects\YOUR_PROJECT_NAME\Saved\Cooked\WindowsNoEditor\YOUR_PROJECT_NAME\Metadata
 
 > Licensing and Contributions

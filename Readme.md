@@ -90,7 +90,7 @@ UnrealPak <PakFolder> -GeneratePIXMappingFile -OutputPath=<Path>
 ```
 
 ###### Decryption:
-in UnrealPakTool folder, open/edit [Crypto.json](https://raw.githubusercontent.com/somethingcoolmustbehere/dumpPakKey/master/dumpPakKey.py).
+in UnrealPakTool folder, open/edit [Crypto.json](https://github.com/somethingcoolmustbehere/UnrealPakTool/blob/master/Crypto.json).
 ```
 "EncryptionKey":
   {

@@ -1,40 +1,97 @@
-## UnrealPak 4.25.3 [ Tool ] -extract *.pak files for Unreal Engine 4 [win64]
+## UnrealPak 4.25.3 [ tool ] -extract *.pak files for Unreal Engine 4 [win64]
 
-- ver. Unreal Engine 4.25.3 -> UnrealPak 4.25.3 (https://github.com/EpicGames/UnrealEngine.git)
-> Usage:
-- UnrealPak <PakFilename> -Test
-- UnrealPak <PakFilename> -List [-ExcludeDeleted]
-- UnrealPak <PakFilename> <GameUProjectName> <GameFolderName> -ExportDependencies=<OutputFileBase> -NoAssetRegistryCache -ForceDependsGathering
-- UnrealPak <PakFilename> -Extract <ExtractDir> [-Filter=<filename>]
-- UnrealPak <PakFilename> -Create=<ResponseFile> [Options]
-- UnrealPak <PakFilename> -Dest=<MountPoint>
-- UnrealPak <PakFilename> -Repack [-Output=Path] [-ExcludeDeleted] [Options]
-- UnrealPak <PakFilename1> <PakFilename2> -diff
-- UnrealPak <PakFolder> -AuditFiles [-OnlyDeleted] [-CSV=<filename>] [-order=<OrderingFile>] [-SortByOrdering]
-- UnrealPak <PakFilename> -WhatsAtOffset [offset1] [offset2] [offset3] [...]
-- UnrealPak <PakFolder> -GeneratePIXMappingFile -OutputPath=<Path>
+###### Unreal Engine 4.25.3 -> UnrealPak 4.25.3 
+###### Current Release of Unreal Engine can be found here: [Unreal Engine 4](https://github.com/EpicGames/UnrealEngine.git)
 
-> Options:
-- -cryptokeys=< encryption keys Crypto.json>
-- -blocksize=< BlockSize >
-- -bitwindow=< BitWindow >
-- -compress
-- -encrypt
-- -order=<OrderingFile>
-- -diff (requires 2 filenames first)
-- -enginedir (specify engine dir for when using ini encryption configs)
-- -projectdir (specify project dir for when using ini encryption configs)
-- -encryptionini (specify ini base name to gather encryption settings from)
-- -extracttomountpoint (Extract to mount point path of pak file)
-- -encryptindex (encrypt the pak file index, making it unusable in unrealpak without supplying the key)
-- -compressionformat[s]=<Format[,format2,...]> (set the format(s) to compress with, falling back on failures)
-- -encryptionkeyoverrideguid (override the encryption key guid used for encrypting data in this pak file)
-- -sign (generate a signature (.sig) file alongside the pak)
-- -fallbackOrderForNonUassetFiles (if order is not specified for ubulk/uexp files, figure out implicit order based on the uasset order. Generally applies only to the cooker order)
+###### Usage:
 
-> Decryption:
-- Open/Edit Crypto.json
-```json
+```
+UnrealPak <PakFilename> -Test
+```
+```
+UnrealPak <PakFilename> -List [-ExcludeDeleted]
+```
+```
+UnrealPak <PakFilename> <GameUProjectName> <GameFolderName> -ExportDependencies=<OutputFileBase> -NoAssetRegistryCache -ForceDependsGathering
+```
+```
+UnrealPak <PakFilename> -Extract <ExtractDir> [-Filter=<filename>]
+```
+```
+UnrealPak <PakFilename> -Create=<ResponseFile> [Options]
+```
+```
+UnrealPak <PakFilename> -Dest=<MountPoint>
+```
+```
+UnrealPak <PakFilename> -Repack [-Output=Path] [-ExcludeDeleted] [Options]
+```
+```
+UnrealPak <PakFilename1> <PakFilename2> -diff
+```
+```
+UnrealPak <PakFolder> -AuditFiles [-OnlyDeleted] [-CSV=<filename>] [-order=<OrderingFile>] [-SortByOrdering]
+```
+```
+UnrealPak <PakFilename> -WhatsAtOffset [offset1] [offset2] [offset3] [...]
+```
+```
+UnrealPak <PakFolder> -GeneratePIXMappingFile -OutputPath=<Path>
+```
+
+###### Options:
+```
+-cryptokeys=< encryption keys Crypto.json>
+```
+```
+-blocksize=< BlockSize >
+```
+```
+-bitwindow=< BitWindow >
+```
+```
+-compress
+```
+```
+-encrypt
+```
+```
+-order=<OrderingFile>
+```
+```
+-diff (requires 2 filenames first)
+```
+```
+-enginedir (specify engine dir for when using ini encryption configs)
+```
+```
+-projectdir (specify project dir for when using ini encryption configs)
+```
+```
+-encryptionini (specify ini base name to gather encryption settings from)
+```
+```
+-extracttomountpoint (Extract to mount point path of pak file)
+```
+```
+-encryptindex (encrypt the pak file index, making it unusable in unrealpak without supplying the key)
+```
+```
+-compressionformat[s]=<Format[,format2,...]> (set the format(s) to compress with, falling back on failures)
+```
+```
+-encryptionkeyoverrideguid (override the encryption key guid used for encrypting data in this pak file)
+```
+```
+-sign (generate a signature (.sig) file alongside the pak)
+```
+```
+-fallbackOrderForNonUassetFiles (if order is not specified for ubulk/uexp files, figure out implicit order based on the uasset order. Generally applies only to the cooker order)
+```
+
+###### Decryption:
+in UnrealPakTool folder, open/edit [Crypto.json](https://raw.githubusercontent.com/somethingcoolmustbehere/dumpPakKey/master/dumpPakKey.py).
+```
 "EncryptionKey":
   {
       "$type":"2",
@@ -42,10 +99,14 @@
       "Guid":"null",
       "Key":"Your Base64 key here"
   },
+ ```
+"Your Base64 key here" paste your generated key (in the middle of " "), save file.
+then in cmd run:
 ```
-
-- Crypto.json default location within your project
-- X:\Users\USER_NAME\Documents\Unreal Projects\YOUR_PROJECT_NAME\Saved\Cooked\WindowsNoEditor\YOUR_PROJECT_NAME\Metadata
+UnrealPak.exe name_of_your_game-WindowsNoEditor.pak -cryptokeys=Crypto.json
+```
+**[ i ]** Crypto.json default location within your project:
+**[ i ]** X:\Users\USER_NAME\Documents\Unreal Projects\YOUR_PROJECT_NAME\Saved\Cooked\WindowsNoEditor\YOUR_PROJECT_NAME\Metadata
 
 > Licensing and Contributions
 > ---------------------------

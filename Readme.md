@@ -1,7 +1,7 @@
 ## UnrealPak 4.25.3 [ tool ] -extract *.pak files for Unreal Engine 4 [win64]
 
 ###### Unreal Engine 4.25.3 -> UnrealPak 4.25.3 
-###### Current Release of Unreal Engine can be found here: [Unreal Engine 4](https://github.com/EpicGames/UnrealEngine.git) ![why_so_epic?!](https://github.com/somethingcoolmustbehere/UnrealPakTool/blob/master/why_so_epic.png)
+###### Current Release of Unreal Engine can be found here: [Unreal Engine 4](https://github.com/EpicGames/UnrealEngine.git) ![why_so_epic?!]()
 
 ###### Usage:
 
